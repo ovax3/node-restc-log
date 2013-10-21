@@ -1,0 +1,39 @@
+{
+  "name": "restc-log",
+  "version": "0.1.0",
+  "description": "basic RestC log plugin",
+  "keywords": [
+    "rest",
+    "restful",
+    "client",
+    "composition",
+    "plugin",
+    "log"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neo9/node-restc-log.git"
+  },
+  "bugs": {
+    "url": "https://github.com/neo9/node-restc-log/issues"
+  },
+  "licences": {
+    "type": "MIT"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "author": "ovmjm <ov@annexe3.com>",
+  "dependencies": {
+    "colors": "~0.6.2",
+    "curly-colors": "~0.1.0",
+    "dot": "~1.0.2"
+  },
+  "devDependencies": {
+    "restc": "~0.1.2"
+  }
+}
