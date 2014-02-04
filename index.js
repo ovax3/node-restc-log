@@ -9,7 +9,7 @@ module.exports.logger = function (options) {
     var reqtpl = options.reqtpl;
     if (!reqtpl) {
       if (!default_reqfmt) {
-        default_reqfmt = require('dot').template(require('curly-colors')('<{magenta>{{=it.name}}<}> << <{yellow>{{=it.method}}<}> {{=it.path}}{{? it.body}} {{=JSON.stringify(it.body, undefined, 2)}}{{?}}'));
+        default_reqfmt = require('dot').template(require('curly-colors')('<{magenta>{{=it.name}}<}> << <{yellow>{{=it.method}}<}> {{=it.path}}{{? it.data}} {{=JSON.stringify(it.data, undefined, 2)}}{{?}}'));
       }
       reqfmt = default_reqfmt;
     } else {
@@ -22,7 +22,7 @@ module.exports.logger = function (options) {
     var restpl = options.restpl;
     if (!restpl) {
       if (!default_resfmt) {
-        default_resfmt = require('dot').template(require('curly-colors')('<{magenta>{{=it.req.options.name}}<}> >> <{yellow>{{=it.req.method}}<}> {{=it.req.path}} {{? it.res.statusCode <= 299}}<{green>{{=it.res.statusCode}}<}>{{??}}<{red>{{=it.res.statusCode}}<}>{{?}}{{? it.res.body}} {{=JSON.stringify(it.res.body, undefined, 2)}}{{?}}'));
+        default_resfmt = require('dot').template(require('curly-colors')('<{magenta>{{=it.req.options.name}}<}> >> <{yellow>{{=it.req.method}}<}> {{=it.req.path}} {{? it.res.statusCode <= 299}}<{green>{{=it.res.statusCode}}<}>{{??}}<{red>{{=it.res.statusCode}}<}>{{?}}{{? it.res.data}} {{=JSON.stringify(it.res.data, undefined, 2)}}{{?}}'));
       }
       resfmt = default_resfmt;
     } else {
